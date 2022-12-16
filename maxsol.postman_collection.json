@@ -1,0 +1,744 @@
+{
+	"info": {
+		"_postman_id": "7aab06ec-49d9-4c0a-9e9d-6970f745f2ac",
+		"name": "maxsol",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "11854664"
+	},
+	"item": [
+		{
+			"name": "Alamat",
+			"item": [
+				{
+					"name": "Add Alamat",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJqdGkiOiJteUpXVCIsInN1YiI6ImFuamFuaSIsImF1dGhvcml0aWVzIjpbImFkbWluIl0sImlhdCI6MTY3MTA5MjIzNiwiZXhwIjoxNjcxMDkyODM2fQ.Hd_mWR1Dut79uCcBLGzVCpTbTayIVFYyvOYWQReOhoRM-evYKM1dXQd6M9EY36w8lKymNz1f3jqf18e5yYAKUg",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"kota\" : \"Jakarta\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/maxsol/alamat",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"maxsol",
+								"alamat"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Alamat",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJqdGkiOiJteUpXVCIsInN1YiI6ImFuamFuaSIsImF1dGhvcml0aWVzIjpbImFkbWluIl0sImlhdCI6MTY3MTE4ODM2MSwiZXhwIjoxNjcxMTg4OTYxfQ.SqoXz4ZhVPX1nxloou9nr4FQx9g16f5MHYKjt3W0Si48SVWFBHzV8YtUpgCxE0lQXa0DK-7MMrMDaOhZ7CPOiA",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/maxsol/alamat",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"maxsol",
+								"alamat"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get One Alamat",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJqdGkiOiJteUpXVCIsInN1YiI6ImFuamFuaSIsImF1dGhvcml0aWVzIjpbImFkbWluIl0sImlhdCI6MTY3MTE4OTE2MywiZXhwIjoxNjcxMTg5NzYzfQ._5YtULSgw7TteHTRL1YjXmyXUI7fys6QUlfHdDWC0QxfilKYVhPPXwE5bgx9ijqcRQnEjSkzIBrJbe7PcIrqFA",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/maxsol/alamat/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"maxsol",
+								"alamat",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Edit Alamat",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJqdGkiOiJteUpXVCIsInN1YiI6ImFuamFuaSIsImF1dGhvcml0aWVzIjpbImFkbWluIl0sImlhdCI6MTY3MTE4NjcwOSwiZXhwIjoxNjcxMTg3MzA5fQ.wI7annVcU5rY3lEQpAEaDuoJBSkrJY0FosPj1vidJcbXr1WTFPd4ku9PRAPaD3y6ovVy8LOip3DE3lun5i_Dpg",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"kota\" : \"Sby\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/maxsol/alamat/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"maxsol",
+								"alamat",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Alamat",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJqdGkiOiJteUpXVCIsInN1YiI6ImFuamFuaSIsImF1dGhvcml0aWVzIjpbImFkbWluIl0sImlhdCI6MTY3MTA5MjIzNiwiZXhwIjoxNjcxMDkyODM2fQ.Hd_mWR1Dut79uCcBLGzVCpTbTayIVFYyvOYWQReOhoRM-evYKM1dXQd6M9EY36w8lKymNz1f3jqf18e5yYAKUg",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/maxsol/alamat/3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"maxsol",
+								"alamat",
+								"3"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Customer",
+			"item": [
+				{
+					"name": "Get All Customer",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJqdGkiOiJteUpXVCIsInN1YiI6ImFuamFuaSIsImF1dGhvcml0aWVzIjpbImFkbWluIl0sImlhdCI6MTY3MTE3MDE3NywiZXhwIjoxNjcxMTcwNzc3fQ.pVtFOXIesUI0DWfqWk12rHPWijyAN7_3r2367dA3KCIDSBBHFRAP5bI_7wdwCuNWQjF8t2FrAGemVAz7r5RtAg",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/maxsol/customer",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"maxsol",
+								"customer"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get One Customer",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJqdGkiOiJteUpXVCIsInN1YiI6ImFuamFuaSIsImF1dGhvcml0aWVzIjpbImFkbWluIl0sImlhdCI6MTY3MTE5NTY3NywiZXhwIjoxNjcxMTk2Mjc3fQ.eMf-6h-w1qclMiTs7OV1nYX-BoLfeiA4gidWJ3pmJH-H0x7jbexmQcFyWdDOorP7vGukNk5qLTPQMu6fwfIDlg",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/maxsol/customer/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"maxsol",
+								"customer",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add Customer",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJqdGkiOiJteUpXVCIsInN1YiI6ImFuamFuaSIsImF1dGhvcml0aWVzIjpbImFkbWluIl0sImlhdCI6MTY3MTE3MjI2OCwiZXhwIjoxNjcxMTcyODY4fQ.IiJLiSHLRll8sOd9cvAjIBk5kNV_JmEXDhGO3WWQHKSv-Hcw__TDlRF_6h_AQBPAyybfk5mwMj_-qKi_FIsr6g",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nama\" : \"Anjani\",\r\n    \"kota\" : \"Malang\"\r\n    \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/maxsol/customer",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"maxsol",
+								"customer"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add Produk Dibeli Customer",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJqdGkiOiJteUpXVCIsInN1YiI6ImFuamFuaSIsImF1dGhvcml0aWVzIjpbImFkbWluIl0sImlhdCI6MTY3MTE1MjI4MywiZXhwIjoxNjcxMTUyODgzfQ.YreiGfRzduW0H2ncFxvwJWoa7gymFKcti5i18M2GdsvBSwT3nnCE0jtrk8A5qknfCm3buSHpLINFHX_Kaos1vg",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/maxsol/customer/1/produk/4",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"maxsol",
+								"customer",
+								"1",
+								"produk",
+								"4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Edit Customer",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJqdGkiOiJteUpXVCIsInN1YiI6ImFuamFuaSIsImF1dGhvcml0aWVzIjpbImFkbWluIl0sImlhdCI6MTY3MTE4NjcwOSwiZXhwIjoxNjcxMTg3MzA5fQ.wI7annVcU5rY3lEQpAEaDuoJBSkrJY0FosPj1vidJcbXr1WTFPd4ku9PRAPaD3y6ovVy8LOip3DE3lun5i_Dpg",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nama\" : \"uuo\",\r\n    \"kota\" : \"Malang\"\r\n    \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/maxsol/customer/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"maxsol",
+								"customer",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Customer",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJqdGkiOiJteUpXVCIsInN1YiI6ImFuamFuaSIsImF1dGhvcml0aWVzIjpbImFkbWluIl0sImlhdCI6MTY3MTE3Mzk2MCwiZXhwIjoxNjcxMTc0NTYwfQ.p07DPftVc3iMw3GCNs1eEULsMppwtDSNuLe-eSLlELsJPm7F-Et4LHHae5gkKQQ8E7LpDuoQoGhWIsJFiuLczw",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/maxsol/customer/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"maxsol",
+								"customer",
+								"2"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Supplier",
+			"item": [
+				{
+					"name": "Add Supplier",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJqdGkiOiJteUpXVCIsInN1YiI6ImFuamFuaSIsImF1dGhvcml0aWVzIjpbImFkbWluIl0sImlhdCI6MTY3MTE0ODc0NSwiZXhwIjoxNjcxMTQ5MzQ1fQ.70OrO0ZKVqo_rQYYqKG_KSAx2qJWVo81Aj6PNi1AfJ9BLk5dT-2mamcnNCBIKO7T3-5JmT3LMJwaCPBJUNJi0A",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"supplier\" : \"PT. EFG\",\r\n    \"produk\" : [\r\n        \"Beras\",\"Madu\",\"Popok\"\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/maxsol/supplier",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"maxsol",
+								"supplier"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Supplier",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJqdGkiOiJteUpXVCIsInN1YiI6ImFuamFuaSIsImF1dGhvcml0aWVzIjpbImFkbWluIl0sImlhdCI6MTY3MTE3NDMxMCwiZXhwIjoxNjcxMTc0OTEwfQ.hHC_F-8UVFSuUxb-ZD0Yu2ObtgH8_vQ5nkpP4BVMvFHe3hcTxp_VZ88h_xDvZEswJnpHbRos1zmiUEI5gXoA4w",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/maxsol/supplier",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"maxsol",
+								"supplier"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get One Supplier",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJqdGkiOiJteUpXVCIsInN1YiI6ImFuamFuaSIsImF1dGhvcml0aWVzIjpbImFkbWluIl0sImlhdCI6MTY3MTE5NTY3NywiZXhwIjoxNjcxMTk2Mjc3fQ.eMf-6h-w1qclMiTs7OV1nYX-BoLfeiA4gidWJ3pmJH-H0x7jbexmQcFyWdDOorP7vGukNk5qLTPQMu6fwfIDlg",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/maxsol/supplier/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"maxsol",
+								"supplier",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Edit Supplier",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJqdGkiOiJteUpXVCIsInN1YiI6ImFuamFuaSIsImF1dGhvcml0aWVzIjpbImFkbWluIl0sImlhdCI6MTY3MTE4NTk5MSwiZXhwIjoxNjcxMTg2NTkxfQ.Ha3a7knARJL1RghkeLNNWJ2ZVRiZWRr9QtEleCEnf3DmTjQQO5bKujp9u-3vZvfR7pUZeUQfyOkJNZZ6w9EqZg",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nama_supplier\" : \"uu\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/maxsol/supplier/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"maxsol",
+								"supplier",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Supplier",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJqdGkiOiJteUpXVCIsInN1YiI6ImFuamFuaSIsImF1dGhvcml0aWVzIjpbImFkbWluIl0sImlhdCI6MTY3MTE4NTk5MSwiZXhwIjoxNjcxMTg2NTkxfQ.Ha3a7knARJL1RghkeLNNWJ2ZVRiZWRr9QtEleCEnf3DmTjQQO5bKujp9u-3vZvfR7pUZeUQfyOkJNZZ6w9EqZg",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/maxsol/supplier/3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"maxsol",
+								"supplier",
+								"3"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Produk",
+			"item": [
+				{
+					"name": "Add Produk",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJqdGkiOiJteUpXVCIsInN1YiI6ImFuamFuaSIsImF1dGhvcml0aWVzIjpbImFkbWluIl0sImlhdCI6MTY3MTE5Njg0MywiZXhwIjoxNjcxMTk3NDQzfQ.FJb3btfQDKZRF7eaB2UWSYpFNfCKBWJ_X21a0lgEXOeFgcQmpLbdQh3Nu5NHasbg4FYKblhp25C5g3nzQrM1HQ",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nama\" : \"Piring\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/maxsol/produk",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"maxsol",
+								"produk"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Produk",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJqdGkiOiJteUpXVCIsInN1YiI6ImFuamFuaSIsImF1dGhvcml0aWVzIjpbImFkbWluIl0sImlhdCI6MTY3MTE5Njg0MywiZXhwIjoxNjcxMTk3NDQzfQ.FJb3btfQDKZRF7eaB2UWSYpFNfCKBWJ_X21a0lgEXOeFgcQmpLbdQh3Nu5NHasbg4FYKblhp25C5g3nzQrM1HQ",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/maxsol/produk",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"maxsol",
+								"produk"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get One Produk",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJqdGkiOiJteUpXVCIsInN1YiI6ImFuamFuaSIsImF1dGhvcml0aWVzIjpbImFkbWluIl0sImlhdCI6MTY3MTE5Njg0MywiZXhwIjoxNjcxMTk3NDQzfQ.FJb3btfQDKZRF7eaB2UWSYpFNfCKBWJ_X21a0lgEXOeFgcQmpLbdQh3Nu5NHasbg4FYKblhp25C5g3nzQrM1HQ",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/maxsol/produk/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"maxsol",
+								"produk",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Edit Produk",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJqdGkiOiJteUpXVCIsInN1YiI6ImFuamFuaSIsImF1dGhvcml0aWVzIjpbImFkbWluIl0sImlhdCI6MTY3MTE5Njg0MywiZXhwIjoxNjcxMTk3NDQzfQ.FJb3btfQDKZRF7eaB2UWSYpFNfCKBWJ_X21a0lgEXOeFgcQmpLbdQh3Nu5NHasbg4FYKblhp25C5g3nzQrM1HQ",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nama\" : \"Pirings\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/maxsol/produk/5",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"maxsol",
+								"produk",
+								"5"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Produk",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJqdGkiOiJteUpXVCIsInN1YiI6ImFuamFuaSIsImF1dGhvcml0aWVzIjpbImFkbWluIl0sImlhdCI6MTY3MTE5Njg0MywiZXhwIjoxNjcxMTk3NDQzfQ.FJb3btfQDKZRF7eaB2UWSYpFNfCKBWJ_X21a0lgEXOeFgcQmpLbdQh3Nu5NHasbg4FYKblhp25C5g3nzQrM1HQ",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/maxsol/produk/5",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"maxsol",
+								"produk",
+								"5"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Swagger",
+			"item": [
+				{
+					"name": "Swagger Api Docs",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJqdGkiOiJteUpXVCIsInN1YiI6ImFuamFuaSIsImF1dGhvcml0aWVzIjpbImFkbWluIl0sImlhdCI6MTY3MTE5OTM5MywiZXhwIjoxNjcxMTk5OTkzfQ.W6ASA8IgU2hnJCz3bHpKOzxLtCWdWfs2aLmXk3SCeuwHzRPPgq41xgFm-lMJlBtpkQRjmHvAIpP_nhxzS2jv0w",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/v2/api-docs",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"v2",
+								"api-docs"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Swagger UI",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "User Token",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "nama",
+							"value": "anjani",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "anjani",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/maxsol/user",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"maxsol",
+						"user"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
