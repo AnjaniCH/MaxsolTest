@@ -8,6 +8,7 @@ package tes.maxsol.response;
 import java.util.List;
 import lombok.Setter;
 import lombok.Getter;
+import tes.maxsol.entity.Produk;
 
 @Setter
 @Getter

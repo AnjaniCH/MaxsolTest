@@ -1,11 +1,19 @@
 package tes.maxsol.controller;
 
+import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.databind.node.ObjectNode;
+import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import javax.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Pageable;
+import org.springframework.data.domain.Sort;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.MethodArgumentNotValidException;
@@ -16,6 +24,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 import tes.maxsol.entity.Produk;
 import tes.maxsol.exception.ResourceNotFoundException;
@@ -38,20 +47,39 @@ public class ProdukController {
     @Autowired
     private ProdukService produkService;
 
+    @Autowired
+    private ObjectMapper objectMapper;
+
     @GetMapping("/produk")
-    public ResponseEntity<?> getAllProduk() {
+    public ResponseEntity<?> getAllProduk(@RequestParam(required = false) String produk2, @RequestParam(defaultValue = "0") int page, @RequestParam(defaultValue = "3") int size, Pageable pageable) {
         try {
-            List<Produk> list = produkRepository.findAll();
-            List<ProdukResponse> responseList = new ArrayList<>();
-            list.forEach(e -> {
-                ProdukResponse pResponse = new ProdukResponse();
-                String nama = supplierRepository.findNamaSupplier(e.getId_produk());
-                pResponse.setId(e.getId_produk());
-                pResponse.setProduk(e.getNama());
-                pResponse.setSupplier(nama);
-                responseList.add(pResponse);
-            });
-            return ResponseHandler.generateResponse(true, HttpStatus.OK, "List berhasil ditampilkan", responseList);
+            Page<Produk> list = produkService.findAll2(pageable);
+
+            Map<String, Object> map = new HashMap<String, Object>();
+            ObjectNode entity = objectMapper.createObjectNode();
+            List<ObjectNode> entities = new ArrayList<ObjectNode>();
+            map.put("TotalItems", list.getTotalElements());
+            List<Produk> prod = list.getContent();
+            System.out.println("prod : " + prod);
+            if (!prod.isEmpty()) {
+                prod.forEach(p -> {
+                    String nama = supplierRepository.findNamaSupplier(p.getId_produk());
+                    System.out.println("idprod : " + p.getId_produk());
+                    System.out.println("namaprod : " + p.getNama());
+                    System.out.println("supplier : " + nama);
+                    entity.put("IdProduk", p.getId_produk());
+                    entity.put("NamaProduk", p.getNama());
+                    entity.put("Supplier", nama);
+                    entities.add(entity);
+                    map.put("Produk", entities);
+                    map.put("TotalPages", list.getTotalPages());
+                    map.put("CurrentPage", list.getNumber());
+                    
+                });
+                return ResponseHandler.generateResponse(true, HttpStatus.OK, "List berhasil ditampilkan", map);
+            }
+            return ResponseHandler.generateResponse(false, HttpStatus.MULTI_STATUS, null, "Data kosong");
+
         } catch (Exception e) {
             return ResponseHandler.generateResponse(false, HttpStatus.MULTI_STATUS, e.getMessage(), null);
         }

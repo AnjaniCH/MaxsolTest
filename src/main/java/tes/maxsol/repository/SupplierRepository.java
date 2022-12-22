@@ -37,8 +37,8 @@ public interface SupplierRepository extends JpaRepository<Supplier, Long> {
     @Transactional
     Integer updateCustomerAlamat(@Param("nama") String nama, @Param("alamat_id") Long alamat_id, @Param("id_customer") Long id_customer);
 
-    @Query(value = "select s.nama_supplier from supplier s left join produk p on s.id_supplier = p.supplier_id where p.supplier_id = :supplier_id ", nativeQuery = true)
-    String findNamaSupplier(@Param("supplier_id") Long supplier_id);
+    @Query(value = "select s.nama_supplier from supplier s left join produk p on s.id_supplier = p.supplier_id where p.id_produk = :id_produk ", nativeQuery = true)
+    String findNamaSupplier(@Param("id_produk") Long id_produk);
     
     @Query(value = "select * from supplier where id_supplier = :id_supplier", nativeQuery = true)
     List<Supplier> findByIds(@Param("id_supplier") Long id_supplier);
